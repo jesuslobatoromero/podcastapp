@@ -1,10 +1,12 @@
+'use client'
+
 import React from 'react'
 
-const PodcastDetails = ({params} : {params : {podcast : string }}) => {
+const PodcastDetails = ({params} : {params : {podcastId : string }}) => {
   console.log(params); // Verifica el objeto completo params
-  console.log(params.podcast); // Verifica el valor de podcastId
+  console.log(params.podcastId); // Verifica el valor de podcastId
   return (
-    <p className='text-white-1'>PodcastDetails for {params.podcast} </p>
+    <p className='text-white-1'>PodcastDetails for {params.podcastId} </p>
   )
 }
 
