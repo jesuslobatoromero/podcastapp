@@ -1,4 +1,4 @@
-import { defineSchema, defineTable, SearchFilter } from "convex/server";
+import { defineSchema, defineTable } from "convex/server";
 import {v} from "convex/values"
 
 export default defineSchema({
@@ -26,5 +26,11 @@ export default defineSchema({
         imageUrl:v.string(),
         clerkId: v.string(),
         name: v.string(),
-    })
-})
+    }),
+    tasks: defineTable({
+        _id: v.id("tasks"),
+        _creationTime: v.number(),
+        isCompleted: v.boolean(),
+        text: v.string(),
+    }),
+});
